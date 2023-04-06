@@ -1,0 +1,66 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("L4W_S & stepakl AutoFarm", "DarkTheme")
+
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Auto Farm")
+local TPTab = Window:NewTab("Teleport")
+local Other = Window:NewTab("Others")
+local OtherSection = Other:NewSection("Anti AFK")
+local TPSection = TPTab:NewSection("Teleport")
+
+MainSection:NewButton("FS", "FS", function()
+      while true do wait(1)
+         local args = {
+            [1] = {
+               [1] = "Add_FS_Request"
+            }
+         }
+         
+         game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+   end
+end)
+
+MainSection:NewButton("Auto Jump", "Auto Jump", function()
+      while true do wait(0.3)
+         local args = {
+            [1] = {
+               [1] = "Add_JF_Request"
+            }
+         }
+         
+         game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+   end
+end)
+
+MainSection:NewButton("Auto Movement", "Auto Movement", function()
+      while true do wait(0.3)
+         local args = {
+            [1] = {
+               [1] = "Add_MS_Request"
+            }
+      }
+      
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+   end
+end)
+
+OtherSection:NewButton("Anti AFK", "You wont get kicked.", function()
+      local vu = game:GetService("VirtualUser")
+      game:GetService("Players").LocalPlayer.Idled:connect(function()
+      vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+      wait(1)
+      vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   end)
+end)
+
+OtherSection:NewKeybind("P To Hide GUI", "Press button P to close and open GUI", Enum.KeyCode.P, function()
+	Library:ToggleUI()
+end)
+
+TPSection:NewButton("Floating Island", "Teleports you to the Floating Island", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2524.21313, 5485.95068, -525.6073, -0.369062662, 1.67598699e-08, -0.929404497, 1.81451334e-08, 1, 1.08275549e-08, 0.929404497, -1.28681226e-08, -0.369062662)
+end)
+
+TPSection:NewButton("Spawn (In a Tree)", "Teleports you to the Spawn in a Tree", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(459.279877, 272.358582, 924.801575, 0.0463360325, 7.54866321e-08, -0.998925924, -7.70278845e-08, 1, 7.19947977e-08, 0.998925924, 7.36091934e-08, 0.0463360325)
+end)
