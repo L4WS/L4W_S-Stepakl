@@ -57,14 +57,18 @@ OtherSection:NewKeybind("P To Hide GUI", "Press button P to close and open GUI",
 	Library:ToggleUI()
 end)
 
-TPSection:NewButton("Floating Island", "Teleports you to the Floating Island", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2524.21313, 5485.95068, -525.6073, -0.369062662, 1.67598699e-08, -0.929404497, 1.81451334e-08, 1, 1.08275549e-08, 0.929404497, -1.28681226e-08, -0.369062662)
-end)
-
 TPSection:NewButton("Spawn (In a Tree)", "Teleports you to the Spawn in a Tree", function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(459.279877, 272.358582, 924.801575, 0.0463360325, 7.54866321e-08, -0.998925924, -7.70278845e-08, 1, 7.19947977e-08, 0.998925924, 7.36091934e-08, 0.0463360325)
 end)
 
-TPSection:NewButton("Tornado 1MIL", "Tornado 1MIL", function()
+TPSection:NewButton("Floating Island", "Teleports you to the Floating Island", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2524.21313, 5485.95068, -525.6073, -0.369062662, 1.67598699e-08, -0.929404497, 1.81451334e-08, 1, 1.08275549e-08, 0.929404497, -1.28681226e-08, -0.369062662)
+end)
+
+TPSection:NewButton("Tornado 1MIL Thougness", "Tornado 1MIL", function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2300.53662, 977.358887, 1071.13708, 0.283319116, 5.38860228e-08, 0.959025681, 3.71505138e-08, 1, -6.71634481e-08, -0.959025681, 5.46569865e-08, 0.283319116)
+end)
+
+TPSection:NewButton("Volcano 10 Mil Thougness", "Volcano 10 Mil", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1919.92639, 887.42804, -1973.80957, -0.430427223, 1.12983551e-08, 0.902625263, -1.7328416e-08, 1, -2.07804689e-08, -0.902625263, -2.4585546e-08, -0.430427223)
 end)
