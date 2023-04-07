@@ -64,3 +64,7 @@ end)
 TPSection:NewButton("Spawn (In a Tree)", "Teleports you to the Spawn in a Tree", function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(459.279877, 272.358582, 924.801575, 0.0463360325, 7.54866321e-08, -0.998925924, -7.70278845e-08, 1, 7.19947977e-08, 0.998925924, 7.36091934e-08, 0.0463360325)
 end)
+
+TPSection:NewButton("Tornado 1MIL", "Tornado 1MIL", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2300.53662, 977.358887, 1071.13708, 0.283319116, 5.38860228e-08, 0.959025681, 3.71505138e-08, 1, -6.71634481e-08, -0.959025681, 5.46569865e-08, 0.283319116)
+end)
